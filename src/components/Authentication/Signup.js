@@ -91,6 +91,7 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+      setPicLoading(false);
       return;
     }
 
@@ -113,7 +114,6 @@ const Signup = () => {
         position: "bottom",
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
-      setPicLoading(false);
       history.pushState("/chats");
     } catch (error) {
       toast({
